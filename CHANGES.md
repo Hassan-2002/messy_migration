@@ -9,10 +9,10 @@ Poor Input Validation: Incoming data lacked robust validation.
 5. Hardcoded Configuration: Settings were inflexible and insecure.
 6.   Absence of Logging: No structured logging for monitoring or debugging.
 
-Solutions Implemented
+Changes I made to deal with the issues identified
 1. Code Organization
-Modular Design: Code is split into distinct files (app.py, init_db.py, app/__init__.py, app/db.py, app/errors.py, app/routes.py, app/schemas.py, app/utils.py, tests/).
-Clear Responsibilities: Each file has a specific role
+I split the code into distinct files (app.py, init_db.py, app/__init__.py, app/db.py, app/errors.py, app/routes.py, app/schemas.py, app/utils.py, tests/). 
+Each file has a specific role
 2. Security Improvements
 Parameterized Queries: SQL injection is prevented by using parameterized queries in all database operations.
 Secure Password Hashing: Passwords are securely hashed and salted using werkzeug.security.
@@ -33,6 +33,7 @@ If given more time I would:
 2. Expand Automated Tests: Develop more exhaustive unit tests for individual functions and more integration tests covering all API endpoints and complex scenarios.
 3. Structure it better by adding config file and util files to imporve reusability.
 4. Rate Limiting: Add rate limiting to sensitive endpoints (e.g., login, user creation) to prevent abuse and brute-force attacks.
+5. Format this file better and write a more detailed documentation 
 
 
 
